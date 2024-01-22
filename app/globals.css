@@ -26,6 +26,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+a.link.active {
+  border-bottom: 3px solid #3456a3;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
