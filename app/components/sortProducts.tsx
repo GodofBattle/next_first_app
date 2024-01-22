@@ -11,11 +11,29 @@ export default function SortProducts() {
         window.history.pushState(null, '', `?${params.toString()}`);
     }
 
+    const forcedError = () => {
+        console.info('forcedError');
+
+        const t = [4,56,32];
+
+        console.info(t[5] / 0);
+        
+        try {
+            const t = [4,56,32];
+            console.info(t[5] / 0);
+            throw Error('error 11 22');
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
     return (
         <>
             <button onClick={() => updateSorting('asc')}>Sort Ascending</button>
             <br/>
             <button onClick={() => updateSorting('desc')}>Sort Descending</button>
+            <br/>
+            <button onClick={() => forcedError()}>Error Attack!!</button>
         </>
     )
 }
