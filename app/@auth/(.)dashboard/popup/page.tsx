@@ -1,11 +1,13 @@
-import Modal from "@/app/components/modal";
+'use client'
+
+import Popup from "./popup";
 
 export default function Login() {
     return (
-        <Modal>
+        <Popup>
             <h1>Login</h1>
             <p>User</p>
             <p>Password</p>
-        </Modal>
+        </Popup>
     );
 }

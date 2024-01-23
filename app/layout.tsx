@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import getUser from "./lib/auth";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,14 +11,24 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children
+  children,
+  login
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
+  login: React.ReactNode;
 }>) {
-  return (
+  const isLoggedIn = getUser();
+
+  return isLoggedIn ? (
     <html lang="kr">
       <body className={inter.className}>
         {children}
+      </body>
+    </html>
+  ): (
+    <html lang="kr">
+      <body className={inter.className}>
+        {login}
       </body>
     </html>
   );

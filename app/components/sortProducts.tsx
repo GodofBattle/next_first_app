@@ -1,5 +1,6 @@
 'use client'
 
+import Link from "next/link";
 import { useSearchParams } from "next/navigation"
 
 export default function SortProducts() {
@@ -33,7 +34,7 @@ export default function SortProducts() {
             <br/>
             <button onClick={() => updateSorting('desc')}>Sort Descending</button>
             <br/>
-            <button onClick={() => forcedError()}>Error Attack!!</button>
+            <button onClick={() => forcedError()}>Error Attack!!</button>            
         </>
     )
 }

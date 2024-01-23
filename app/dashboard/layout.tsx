@@ -1,23 +1,15 @@
-import { ErrorBoundary } from "next/dist/client/components/error-boundary"
-import Error from "./error"
-
-export default function DashboardLayout({
-    children,
-    auth
-}:{
+export default function DashboardLayout(props: {
     children: React.ReactNode,
     auth: React.ReactNode
 }) {
     return (
         <section>
             {/* Include shared UI here e.g. a header or sidebar */}
-            <ErrorBoundary errorComponent={ Error }>
-                <nav>
-                    NAVBAR Tag
-                </nav>
-                { children }
-                { auth }
-            </ErrorBoundary>
+            <nav>
+                NAVBAR Tag
+            </nav>
+            { props.children }
+            { props.auth }
         </section>
     )
 }

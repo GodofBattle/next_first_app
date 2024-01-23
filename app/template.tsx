@@ -1,12 +1,12 @@
 import { Links } from "./components/links";
 
-export default function Template({ children }: { children: React.ReactNode }) {
+export default function Template(props: {
+    children: React.ReactNode;
+}) {
     return (
-        <div
-            style={{ backgroundColor: '#ffaa0010' }}
-        >
+        <div>
             <Links/>
-            {children}
+            { props.children }
         </div>
     );
 }
