@@ -38,6 +38,14 @@ export function Links() {
                         Dashboard - setting
                     </Link>
                 </li>
+                <li style={{ marginRight: '1rem' }}>
+                    <Link
+                        className={`link ${pathname === '/parallel' ? 'active' : ''}`}
+                        href="/parallel"
+                    >
+                        Parallel Routes Sample
+                    </Link>
+                </li>
             </ul>
         </nav>
     )
