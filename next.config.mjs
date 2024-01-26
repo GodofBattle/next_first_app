@@ -9,7 +9,9 @@ const nextConfig = {
                 permanent: true
             }
         ]
-    }
+    },
+    skipTrailingSlashRedirect: true,
+    skipMiddlewareUrlNormalize: false
 };
 
 export default nextConfig;

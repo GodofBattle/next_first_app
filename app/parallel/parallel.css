@@ -75,6 +75,7 @@
     font-size: 24px;
     font-weight: 500;
     max-width: 200px;
+    box-shadow: 1px 1px 10px 2px #88888888;
 }
   
 @media (max-width: 600px) {
