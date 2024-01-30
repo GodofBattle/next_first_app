@@ -46,6 +46,14 @@ export function Links() {
                         Parallel Routes Sample
                     </Link>
                 </li>
+                <li style={{ marginRight: '1rem' }}>
+                    <Link
+                        className={`link ${pathname === '/fetch' ? 'active' : ''}`}
+                        href="/fetch"
+                    >
+                        Data Fetch
+                    </Link>
+                </li>
             </ul>
         </nav>
     )
